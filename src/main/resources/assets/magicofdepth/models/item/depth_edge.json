@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "magicofdepth:item/depth_edge"
+  }
+}

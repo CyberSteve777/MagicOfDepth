@@ -1,0 +1,53 @@
+{
+	"schemaVersion": 1,
+	"id": "mod",
+	"version": "${version}",
+	"name": "Magic of Depth",
+	"description": "This mods adds items with magic of depth relations",
+	"authors": [
+		"CyberSteve777"
+	],
+	"contact": {
+		"sources": "https://github.com/CyberSteve777/magic-of-depth"
+	},
+	"license": "MIT Licence",
+	"icon": "assets/magicofdepth/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "me.cybersteve777.magicofdepth.MagicOfDepth",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "me.cybersteve777.magicofdepth.MagicOfDepthClient",
+				"adapter": "kotlin"
+			}
+		],
+		"fabric-datagen": [
+			{
+				"value": "me.cybersteve777.magicofdepth.MagicOfDepthDataGenerator",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"mod.mixins.json",
+		{
+			"config": "mod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.22",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*",
+		"fabric-language-kotlin": ">=1.9.0"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
